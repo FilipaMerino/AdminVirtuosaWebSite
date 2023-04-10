@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+
+  resources :posts, only: [:create, :new, :show, :index, :edit, :destroy]
+  
+
   devise_scope :user do
     get "/admin", to: "devise/sessions#new"
   end
