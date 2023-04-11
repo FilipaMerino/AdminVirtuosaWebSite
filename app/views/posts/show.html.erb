@@ -1,4 +1,4 @@
 <%= @post.content %>
-<%= image_tag @post.image, style:"width:100px" %>
+<%= cl_image_tag @post.image.key, style:"width:100px" %>
 
 <%= link_to  "edit", edit_post_path(@post) %>
