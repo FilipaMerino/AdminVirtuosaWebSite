@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 
   resources :posts
-
+  resources :testimonials
 
   devise_scope :user do
     get "/admin", to: "devise/sessions#new"
