@@ -1,0 +1,9 @@
+<h1>testimonials</h1>
+
+
+<% @testimonials.each do |testimonial| %>
+
+  <%= testimonial.message %>
+  <%= image_tag testimonial.photo %>
+  <%= testimonial.name %>
+<% end %>

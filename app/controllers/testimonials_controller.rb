@@ -1,22 +1,19 @@
 class TestimonialsController < ApplicationController
-  before_action :set_testimonial, only: [:destroy, :edit, :update]
+  before_action :set_testimonial, only: [:update, :edit, :destroy]
 
   def index
-    @testimonial = Testimonial.all
+    @testimonials = Testimonial.all
   end
-
-
 
   def new
     @testimonial = Testimonial.new
   end
 
 
-
   def create
-    @testimonial = Testimonial.create
+    @testimonial = Testimonial.create(testimonial_params)
     if @testimonial.save
-      redirect_to testimonial_path(@testimonial)
+      redirect_to testimonials_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -30,30 +27,30 @@ class TestimonialsController < ApplicationController
 
   def update
     if @testimonial.update(testimonial_params)
-      redirect_to testimonial_path(@testimonial)
+      redirect_to root_path(anchor: 'testimonials')
     else
       render :edit
     end
   end
 
 
-
   def destroy
     @testimonial.destroy
-    redirect_to @testimonials_path
+    redirect_to posts_path
   end
 
 
 
   private
 
+
   def set_testimonial
-    @testimonial.find(params[:id])
+    @testimonial = Testimonial.find(params[:id])
   end
 
 
   def testimonial_params
-    params.require(:testimonia).permit(:message, :name, :photo, :company)
+    params.require(:testimonial).permit(:message, :name, :photo, :company)
   end
 
 end

@@ -1,0 +1,28 @@
+<div>
+  <%= simple_form_for testimonial do |f| %>
+    <div class="addInputs">
+
+        <%= f.rich_text_area :message %>
+
+        <%= f.input :photo, as: :file, input_html: { style: "width:100px" } %>
+
+        <%= f.input :name,
+                    class:"input-text js-input",
+                    id:"name",
+                    label: "Name",
+                    input_html: { class: "form-control" } %>
+
+        <%= f.input :company,
+                    class:"input-text js-input",
+                    id:"company",
+                    label: "company",
+                    input_html: { class: "form-control" }  %>
+
+        <div class="d-flex justify-content-end">
+
+          <%= f.submit class:"btn btn-primary mt-2" %>
+
+        </div>
+    </div>
+  <% end %>
+</div>
