@@ -1,0 +1,99 @@
+.postsIndexBody{
+  background-color: #E9E8E4;
+  }
+
+  .postsBody{
+    margin: 10vh 50vh;
+  }
+
+
+  .postContent{
+    .titlePosts{
+    text-decoration: none;
+    color: black;
+    height: fit-content; /* or set a fixed height */
+    }
+
+
+    h2{
+      max-width: 90%; /* Set max-width to 90% of the parent container */
+
+    }
+
+    p{
+      font-size: 14px;
+      text-align: justify;
+      max-width: 90%; /* Set max-width to 90% of the parent container */
+    }
+
+
+
+
+
+    .infoPostParagraph{
+      max-width: 90%;
+    }
+
+
+    .indexPostImage {
+      width: 90%;
+      height: auto;
+    }
+
+  }
+
+  .indexPostsLinks{
+    font-size: 14px;
+    max-width: 90%;
+    color: black;
+  }
+
+  .readMoreLink{
+    color: grey;
+    text-decoration: none;
+    min-width: 90px;
+
+    p{
+      font-size: 12px;
+    }
+  }
+
+  .dateParagraph{
+    font-size: 12px!important;
+  }
+  .postContent hr {
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  //__________POSTS SHOW VIEW _____________________________
+
+  .showImagePost{
+    width: 90vh;
+  }
+
+
+
+  .postShowBody{
+    margin: 0 50vh;
+
+    p{
+      font-size: 14px;
+      width: 90vh;
+      text-align: justify;
+    }
+  }
+
+
+  .backLink{
+    color: #333333;
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+
+  .linkParagraph{
+    color: #333333;
+    font-size: 15px;
+  }

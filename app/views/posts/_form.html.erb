@@ -1,7 +1,3 @@
-
-
-
-
 <div>
   <%= simple_form_for post do |f| %>
     <div class="addInputs">
@@ -10,10 +6,14 @@
                     id:"title",
                     label: "Title",
                     input_html: { class: "form-control" } %>
+        <%= f.rich_text_area :content,
+                             input_html: { class: "trix-content form-control" }%>
 
-        <%= f.rich_text_area :content %>
-
-        <%= f.input :image, as: :file, input_html: { style: "width:100px" } %>
+        <%= f.input :image,
+                    class:"input-text js-input",
+                    label: "Image",
+                    as: :file,
+                    input_html: { class: "form-control" } %>
 
         <div class="d-flex justify-content-end">
 

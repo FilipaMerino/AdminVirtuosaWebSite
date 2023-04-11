@@ -1,4 +1,44 @@
-<%= @post.content %>
-<%= cl_image_tag @post.image.key, style:"width:100px" %>
 
-<%= link_to  "edit", edit_post_path(@post) %>
+
+
+
+<body class="postsIndexBody">
+
+
+  <div class="d-flex justify-content-start">
+    <%= link_to posts_path do %>
+      <p class="backLink"><i class="fa-solid fa-circle-arrow-left"></i></p>
+    <% end %>
+  </div>
+
+  <div class="postShowBody">
+
+    <div class="d-flex flex-column">
+      <div class="d-flex flex-column align-items-center">
+        <h2><%= @post.title %></h2>
+
+        <div class="d-flex justify-content-center">
+          <% if @post.image.attached? %>
+            <%= cl_image_tag @post.image.key, class: "showImagePost my-4" %>
+          <% end %>
+        </div>
+
+        <p><%= @post.content %></p>
+        <%# <p class="dateParagraph d-flex justify-content-end"><%= @post.date.strftime('%B %d, %Y')</p> %>
+      </div>
+    </div>
+  </div>
+
+
+    <% if user_signed_in? %>
+
+      <div class="d-flex justify-content-center">
+        <%= link_to edit_post_path(@post) do %>
+          <p class="linkParagraph"><i class="fa-solid fa-pen-to-square"></i></p>
+        <% end %>
+        <%= link_to post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this post?"} do %>
+          <p class="linkParagraph ms-1"><i class="fa-solid fa-trash"></i></p>
+        <% end %>
+      </div>
+    <% end %>
+</body>

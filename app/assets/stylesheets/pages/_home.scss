@@ -1,1 +1,97 @@
 // Specific CSS for your home-page
+#about{
+  margin: 60px 100px;
+
+  p{
+    text-align: justify;
+  }
+}
+
+.aboutImage{
+  width: 20rem;
+}
+
+// _________ FACTS SESSION ______________
+
+#facts{
+
+  margin: 60px 100px;
+  min-height: 100vh;
+}
+
+
+.factsPhoto{
+
+width: 20rem;
+}
+
+
+.colorSection{
+  background-color: #E9E8E4;
+}
+
+// _________SERVICES SESSION ______________
+#services{
+  margin: 60px 100px;
+}
+
+
+// _________ TEAM ________________
+
+.colorTeam{
+  background-color: #E9E8E4;
+}
+
+.teamPictures{
+
+  width: 200px;
+  padding-bottom: 16px;
+}
+
+
+.teamParagraph{
+  line-height: 1.7;
+  text-align:justify;
+  text-align-last: center;
+  font-size: 13px;
+}
+
+
+
+// TESTIMONIALS
+
+
+.fa-circle-plus,
+.editPen,
+.bin{
+  font-size: 20px;
+  color: black;
+}
+
+
+.editPen{
+  margin-left:5px;
+}
+
+
+// _________ CONTACTS ____________
+
+
+#contacts{
+  p{
+    font-size: 12px;
+  }
+}
+
+.contactItem{
+  color: black;
+  font-size: 26px;
+}
+
+.vaLogo{
+  width: 100px;
+}
+
+.chatButton{
+  text-decoration: none!important;
+}
