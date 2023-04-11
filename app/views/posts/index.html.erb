@@ -32,7 +32,27 @@
         </div>
 
           <%# This line means that if the post has more than 230 characters, the post will be cut  %>
-         <%= post.content %>
+          <% if post.content.to_s.length > 230 %>
+            <p class="d-flex justify-content-center">
+              <%= link_to truncate(strip_tags(post.content.to_s), length: 230), post_path(post), class:"titlePosts mb-2" %></p>
+
+                <div class="infoPostParagraph d-flex justify-content-between">
+                  <%= link_to post_path(post), class:"readMoreLink" do %>
+                    <p>Read More</p>
+                  <% end %>
+                  <%# <p class="dateParagraph"><%= post.date.strftime('%B %d, %Y')</p> %>
+                </div>
+
+          <% else %>
+            <p class="d-flex justify-content-center">
+              <%= link_to post.content, post_path(post), class:"titlePosts mb-2" %></p>
+                <div class="infoPostParagraph d-flex justify-content-between">
+                  <%= link_to post_path(post), class:"readMoreLink" do %>
+                    <p>Read More</p>
+                  <% end %>
+                  <%# <p class="dateParagraph"><%= post.date.strftime('%B %d, %Y')</p> %>
+                </div>
+          <% end %>
           <hr>
         </div>
       </div>
