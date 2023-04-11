@@ -1,5 +1,55 @@
-<%# TESTIMONIALS %>
+<section id="testimonials">
 
-<h1>Testimonials</h1>
+  <div class="d-flex align-items-center justify-content-center">
 
-<%= @testimonial.name %>
+    <h1 class="fw-bold d-flex justify-content-center py-4">TESTIMONIALS</h1>
+  <%# If user is signed in, show add testimonial button %>
+    <% if user_signed_in? %>
+      <%= link_to new_testimonial_path, class: "btn" do %>
+        <i class="fa-solid fa-circle-plus"></i>
+      <% end %>
+    <% end %>
+</div>
+<%# For each testimonial do a carousel item %>
+
+  <div id="caroussel" class="carousel slide justify-content-center my-auto" data-bs-ride="false">
+    <div class="carousel-inner">
+      <% @testimonials.each_with_index do |testimonial, i| %>
+        <div class="carousel-item <%= "active" if i==0 %> ">
+          <div class="d-flex flex-column align-items-center">
+            <p><%= testimonial.message %></p>
+            <% if testimonial.photo.attached? %>
+              <%= cl_image_tag testimonial.photo.key, class: "testimonialImage" %>
+            <% end %>
+
+            <h4><%= testimonial.name %></h4>
+            <h6><%= testimonial.company %></h6>
+
+<%# This line of code means that if the user is signed in, delete and edit buttons should be displayed  %>
+            <% if user_signed_in? %>
+              <div class="d-flex">
+                <%= link_to testimonial_path(testimonial), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <i class="fa-solid fa-trash bin"></i>
+                <% end %>
+                <%= link_to edit_testimonial_path(testimonial) do %>
+                  <i class="fa-solid fa-pen-to-square editPen"></i>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#caroussel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#caroussel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
