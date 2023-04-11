@@ -2,9 +2,12 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @post = Post.order(created_at: :desc)
+    @posts = Post.order(created_at: :desc)
   end
 
+  def show
+    # The @post variable is already set in the before_action callback
+  end
 
   def new
     @post = Post.new
@@ -19,7 +22,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   def edit
     # The @post variable is already set in the before_action callback
   end
@@ -32,17 +34,10 @@ class PostsController < ApplicationController
     end
   end
 
-
-
   def destroy
     @post.destroy
     redirect_to posts_path
   end
-
-  def show
-    # The @post variable is already set in the before_action callback
-  end
-
 
   private
 
@@ -50,8 +45,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-
   def post_params
-    params.require(:post).permit(:title)
+    params.require(:post).permit(:title, :content, :image)
+
   end
 end

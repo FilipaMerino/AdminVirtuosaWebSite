@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  resources :posts, only: [:create, :new, :show, :index, :edit, :destroy]
-  
+  resources :posts
+
 
   devise_scope :user do
     get "/admin", to: "devise/sessions#new"

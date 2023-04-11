@@ -1,0 +1,25 @@
+
+
+
+
+<div>
+  <%= simple_form_for post do |f| %>
+    <div class="addInputs">
+        <%= f.input :title,
+                    class:"input-text js-input",
+                    id:"title",
+                    label: "Title",
+                    input_html: { class: "form-control" } %>
+
+        <%= f.rich_text_area :content %>
+
+        <%= f.input :image, as: :file, input_html: { style: "width:100px" } %>
+
+        <div class="d-flex justify-content-end">
+
+          <%= f.submit class:"btn btn-primary mt-2" %>
+
+        </div>
+    </div>
+  <% end %>
+</div>
