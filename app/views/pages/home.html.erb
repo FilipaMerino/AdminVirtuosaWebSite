@@ -1,5 +1,230 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# _____________ Banner ______________ %>
+
+<div class="banner">
+  <%= image_tag "logo.webp", class: "logo" %>
+  <div class="container text-center">
+    <h1 class="mb-4">WHAT WOULD IT BE LIKE TO HAVE YOUR BUSINESS RUNNING SMOOTHLY WITHOUT COMPROMISING YOUR MENTAL HEALTH?</h1>
+    <a  class="btn btn-outline-dark btn-lg" href="#"> Let's chat!</a>
+  </div>
+</div>
 
 
+<%# ABOUT SESSION %>
+<div class="d-flex justify-content-around" id="about">
+  <div class="left-pannel">
+    <%= image_tag "l.jpg", class: "aboutImage"  %>
+  </div>
+  <div class="d-flex flex-column justify-content-center ms-5">
+    <h1>About Us</h1>
+    <p class="mt-4">Hi, I’m Louisa - an admin guru, owner, and founder of Admin Virtuosa. I’m a wife and mom to 2 children and I’m a natural helper and get-it-done kind of girl. Through a degree in Business Administration and over 15 years of experience in the field, I have learned how to efficiently handle business operations. This assures everything runs smoothly on your end, freeing you to conquer your goals and focus on the core aspects of your business. My passion for joining forces with business owners, as well as my understanding of how to work in a team environment, will help your employees grow and succeed, ensuring tasks are executed efficiently in all areas of your business. Admin Virtuosa is a result of my personal burnout, and our core value is “doing business the healthy way!”. Mental health is important, and I believe no one is meant to run a business on their own. Through the power of partnership, your business can flourish without the long-lasting effects of burnout.</p>
+  </div>
+</div>
+
+<%# FACTS SESSION %>
+<div class="colorSection">
+  <div class="d-flex justify-content-around" id="facts">
+    <div class="facts d-flex flex-column justify-content-center">
+      <h1 class="d-flex justify-content-end">Facts About Us</h1>
+      <p class="mt-4 d-flex justify-content-end">I was born and raised in Brooklyn, NYC but currently reside in British Columbia, Canada.</p>
+      <p class="d-flex justify-content-end">I am fluent in both English and Spanish – I’m a Latina. A LATINA FROM BROOKLYN... YES I'M SASSY!</p>
+      <p class="d-flex justify-content-end">I’m a HUGE mental health advocate – I’ve had my struggles.</p>
+      <p class="d-flex justify-content-end">I absolutely hate the spotlight – You can usually find me behind the scenes.</p>
+      <p class="d-flex justify-content-end">I LOVE COFFEE! Lattes and Macchiatos keep me going.</p>
+    </div>
+    <div class="factsImage d-flex flex-column justify-content-center">
+      <%= image_tag "facts.jpg", class: "ms-5 factsPhoto"  %>
+    </div>
+  </div>
+</div>
+
+<%# SERVICES SESSION %>
+<div id="services">
+  <div class="d-flex flex-column align-items-center">
+    <h1>WHAT WE CAN HELP YOU WITH</h1>
+    <h2>Business Management</h2>
+    <p>Are you overwhelmed with all of the behind-the-scenes operations of your business? Tired of having crucial details getting missed amid all your busyness? This service is the perfect opportunity for you! We will free you up to be the face of the business without having to worry about day-to-day operations. Business Management packages include:</p>
+  </div>
+
+
+
+<div class="d-flex justify-content-around">
+  <div class="card-product">
+    <div class="card-product-infos">
+      <h2>People Management</h2>
+      <p>Is keeping track of daily duties, outsourcing, and hiring team members taking too much of your time? With this service we will take care of all these details, making sure your team is happy and motivated.<p>
+    </div>
+  <%= image_tag "peopleManagement.jpg", class:"serviceImages" %>
+  </div>
+
+  <div class="card-product">
+    <div class="card-product-infos">
+      <h2>Project Management</h2>
+      <p>Feeling unable to accomplish everything in your vision for your company? We will stay on top of your projects or assist you in launching a business or program, from start to finish.<p>
+    </div>
+  <%= image_tag "projectManagement.jpg", class:"serviceImages" %>
+  </div>
+
+  <div class="card-product">
+    <div class="card-product-infos">
+      <h2>Operations Management</h2>
+      <p>Looking to eliminate uncertainty and improve quality control? We can help you with that! We will ensure all your systems - for billing, client relationships, communications, and workflow are in place. This also includes Standard Operating Procedure implementation.<p>
+    </div>
+  <%= image_tag "sop.webp", class:"serviceImages" %>
+  </div>
+</div>
+<div>
+  <p>Packages are tailored to your needs so you can pick and choose what you need. If there is a service not listed, reach out and ask! I might be able to add it to your package.</p>
+</div>
+
+
+
+<div class="d-flex flex-column align-items-center">
+  <h2>Administrative Assistance</h2>
+</div>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- First card content -->
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2>Client Care</h2>
+              <p>Struggling with maintaining your database and giving clients the extra WOW factor? With this service, we will keep your clients happy and engaged making sure you Stand Out!</p>
+            </div>
+            <%= image_tag "clientcare.webp", class:"serviceImages" %>
+          </div>
+        </div>
+        <%# -- CARDFINISHED  --%>
+        <div class="col-md-4">
+          <!-- Second card content -->
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2>Event Cordinator</h2>
+              <p>If you’re a visionary business owner but hate the logistics of bringing your vision to life, this service is for you! We will plan and monitor the event from beginning to end, overseeing and preventing any mishaps along the way.</p>
+            </div>
+            <%= image_tag "eventcordinator.webp", class:"serviceImages" %>
+          </div>
+        </div>
+        <%# -- CARDFINISHED  --%>
+        <div class="col-md-4">
+          <!-- Third card content -->
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2>Email Management</h2>
+              <p>Are you feeling overwhelmed by a messy inbox and often miss important emails? Let us help you with that! It’s easy to get lost in your inquiries while you’re busy running other aspects of your business. This can lead to problems in the long run.</p>
+            </div>
+            <%= image_tag "email.webp", class:"serviceImages" %>
+          </div>
+        </div>
+        <%# -- CARDFINISHED  --%>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Fourth card content -->
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2>Calendar Management</h2>
+              <p>Scheduling appointments can be demanding and time consuming, especially if you don’t have the right system in place. With this service, we handle all of your scheduling needs. We handle communications between your clients and assure you always have a reminder of appointments and events</p>
+            </div>
+            <%= image_tag "calendar.webp", class:"serviceImages" %>
+          </div>
+        </div>
+        <%# -- CARDFINISHED  --%>
+        <div class="col-md-4">
+          <!-- Fifth card content -->
+          <div class="card-product">
+            <div class="card-product-infos">
+              <h2>Social Media</h2>
+              <p>Need someone to help you engage with your audience on a regular basis? Struggling with content creation? With this service we handle all of your social media needs, freeing you up to handle the more important aspects of your business.</p>
+            </div>
+            <%= image_tag "socialmedia.webp", class:"serviceImages" %>
+          </div>
+        </div>
+        <%# -- CARDFINISHED  --%>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" id="prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+
+<%# Team Session %>
+<div class="colorTeam" id="team">
+  <div class="d-flex flex-column align-items-center justify-content-around">
+    <h1 class="fw-bold py-5">MEET THE TEAM</h1>
+  </div>
+  <div class="row d-flex justify-content-around">
+    <div class="col d-flex flex-column align-items-center p-5">
+      <%= image_tag"huby.webp", class: "teamPictures" %>
+      <h5>Scott Thiessen</h5>
+      <p>Financial Manager, Sanity officer</p>
+      <p><em>“Behind every successful woman, there’s a cheerleader”</em></p>
+      <p class="teamParagraph">Scott is a vital part of Admin Virtuosa. He makes sure the business is running smoothly by being the right hand of our owner Louisa. As Louisa’s husband, Scott helps keep her sane by making sure she honors her boundaries and giving her pep talks when things get hard, which makes him the perfect sanity officer (yes we made up that position). Scott has a great eye for details and is great with numbers making him the perfect financial manager. He loves all things sports and is a huge football fan… GO GIANTS!!!</p>
+
+    </div>
+
+    <div class="col d-flex flex-column align-items-center p-5">
+      <%= image_tag"filipa.webp", class: "teamPictures" %>
+      <h5>Filipa Merino</h5>
+      <p>Social Media Manager</p>
+      <p> <em>"Successful Social Media marketing is built on relationships"</em></p>
+      <p class="teamParagraph" class="teamParagraph">Filipa handles all social media things. She currently manages the Admin Virtuosa Instagram page, and she is also the brains behind our website as well – SHE DID THAT! She is a go-getter who loves to learn and help. She is also a huge mental health advocate, making her the team's perfect addition.
+
+    </div>
+  </div>
+</div>
+
+<%# TESTIMONIALS %>
 <%= render  "testimonials/testimonials"%>
+<%# CONTACTS %>
+
+<section class="container-fluid row d-flex flex-row py-5" id="contacts">
+
+  <div class="col-lg-12 col-sm-12">
+    <h1 id="contact-title" class="d-flex flex-row align-items-center justify-content-center display-5 fw-bold lh-1 mt-3 mb-3">Contact Us</h1>
+  </div>
+
+
+  <div class="d-flex align-items-center justify-content-center py-3">
+
+    <%= link_to "mailto:louisa@adminvirtuosa.com", class:"contactItem me-2" do %>
+      <i class="fa-solid fa-envelope"></i>
+    <% end %>
+    <%= link_to "https://www.instagram.com/adminvirtuosa/", class:"contactItem me-2" do %>
+      <i class="fa-brands fa-instagram"></i>
+    <% end %>
+    <%= link_to "https://www.facebook.com/adminvirtuosa", class:"contactItem" do %>
+      <i class="fa-brands fa-facebook"></i>
+    <% end %>
+
+  </div>
+
+
+  <div class="d-flex justify-content-center">
+    <p>Langley, British Columbia | Available worldwide | (604)-908-4805</p>
+  </div>
+
+  <div class="d-flex justify-content-center">
+
+
+  <%= link_to "https://www.honeybook.com/widget/lava_virtual_assistance_183635/cf_id/628d3ba43cabd50ba12cb036", class: "chatButton" do %>
+    <button class="btn btn-outline-dark btn-lg mt-1 d-flex justify-content-center">Let's chat!</button>
+  <% end %>
+  </div>
+
+
+
+</section>
