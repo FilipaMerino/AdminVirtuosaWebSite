@@ -7,8 +7,15 @@ Rails.application.routes.draw do
   # root "articles#index"
 
 
-  resources :posts
-  resources :testimonials
+  resources :posts, only: [:create, :new, :show, :index, :edit, :destroy]
+
+  resources :testimonials, only: [:create, :index, :new, :index, :edit, :destroy]
+
+
+
+  patch '/posts/:id', to: 'posts#update'
+  patch '/testimonials/:id', to: 'testimonials#update'
+
 
   devise_scope :user do
     get "/admin", to: "devise/sessions#new"
